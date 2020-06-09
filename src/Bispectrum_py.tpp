@@ -122,10 +122,10 @@ py::array_t<ComplexType,py::array::c_style> bispectre_fft_parallel_py(const py::
 	
 	return  py::array_t<ComplexType,py::array::c_style>
 			(
-			{out.get_n_j(), out.get_n_i()}, // shape
-			{out.get_stride_j() , out.get_stride_i()}, // Strides
-			out.get(), // Pointer
-			free_when_done
+				{out.get_n_j(), out.get_n_i()}, // shape
+				{out.get_stride_j() , out.get_stride_i()}, // Strides
+				out.get(), // Pointer
+				free_when_done
 			);
 }
 
